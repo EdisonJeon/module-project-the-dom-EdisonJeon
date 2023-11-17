@@ -54,6 +54,20 @@ function moduleProject1() {
 
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
+  const widget3 = document.querySelector(".countdown");
+  let count = 5;
+  const countdown = document.createElement("p");
+  countdown.textContent = `T-minus ${count}...`;
+  widget3.appendChild(countdown);
+
+  const id = setInterval(() => {
+    if (count === 1) {
+      countdown.textContent = "Liftoff!";
+      clearInterval(id)
+    } else {
+      countdown.textContent = `T-minus ${--count}...`;
+    }
+  }, 1000);
 
   // 👉 TASK 5 - Build a "Friends" widget
   //  ✨ add your code here
