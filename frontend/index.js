@@ -34,6 +34,23 @@ function moduleProject1() {
 
   // 👉 TASK 3 - Build a "Corporate Speak" widget
   //  ✨ add your code here
+  const randomVerb = () => {
+    let randomNumber = Math.floor(Math.random() * verbs.length);
+    return verbs[randomNumber];
+  };
+  const randomAdverb = () => {
+    let randomNumber = Math.floor(Math.random() * adverbs.length);
+    return adverbs[randomNumber];
+  };
+  const randomNoun = () => {
+    let randomNumber = Math.floor(Math.random() * nouns.length);
+    return nouns[randomNumber];
+  };
+
+  const speak = document.createElement("p");
+  speak.textContent = `We need to ${randomVerb()} our ${randomNoun()} ${randomAdverb()} in order to ${randomVerb()} our ${randomNoun()} ${randomAdverb()}.`;
+  const widget2 = document.querySelector(".corporatespeak");
+  widget2.appendChild(speak);
 
   // 👉 TASK 4 - Build a "Countdown" widget
   //  ✨ add your code here
